@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Tokenized Funds Get Instantly Liquid - Antonina Norair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --serif: 'Lora', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --bg: #fafafa;
+  --border: rgba(0,0,0,0.08);
+  --border-h: rgba(0,0,0,0.14);
+  --text: #111;
+  --text-2: #555;
+  --text-3: #999;
+  --text-4: #bbb;
+  --code-bg: #eeeeee;
+  --code-text: #2a2a2a;
+}
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+a { color: var(--text); text-decoration: none; transition: color 0.3s; }
+a:hover { color: #000; }
+::selection { background: rgba(0,0,0,0.08); }
+
+/* Nav */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  padding: 0 40px; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  background: rgba(250,250,250,0.85);
+  border-bottom: 1px solid var(--border);
+}
+.nav-back {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text-3);
+}
+.nav-back:hover { color: var(--text); }
+
+/* Article */
+.article-wrap { max-width: 1060px; margin: 0 auto; padding: 60px 40px 120px; }
+
+.article-meta {
+  font-family: var(--mono); font-size: 12px; color: var(--text-3);
+  margin-bottom: 16px; letter-spacing: 0.5px;
+}
+
+.article-title {
+  font-family: var(--serif); font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600; line-height: 1.15; letter-spacing: -0.02em;
+  color: var(--text); margin-bottom: 24px;
+}
+
+.article-subtitle {
+  font-size: 18px; color: var(--text-2); line-height: 1.7;
+  margin-bottom: 48px; padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-h);
+}
+
+/* Content */
+.content h2 {
+  font-family: var(--serif); font-size: 24px; font-weight: 600;
+  color: var(--text); margin: 48px 0 16px; line-height: 1.3;
+}
+.content h3 {
+  font-family: var(--sans); font-size: 17px; font-weight: 600;
+  color: var(--text); margin: 32px 0 12px;
+}
+.content p {
+  font-size: 16px; color: var(--text-2); line-height: 1.8;
+  margin-bottom: 16px;
+}
+.content strong { color: var(--text); }
+.content ul, .content ol {
+  margin: 16px 0; padding-left: 24px;
+}
+.content li {
+  font-size: 16px; color: var(--text-2); line-height: 1.8;
+  margin-bottom: 8px;
+}
+.content code {
+  font-family: var(--mono); font-size: 14px;
+  background: var(--code-bg); padding: 2px 6px; border-radius: 3px;
+  color: var(--code-text);
+}
+.content pre {
+  background: var(--code-bg); border-radius: 6px;
+  padding: 20px 24px; margin: 20px 0 24px;
+  overflow-x: auto; border-left: 3px solid rgba(0,0,0,0.35);
+}
+.content pre code {
+  background: none; padding: 0; font-size: 14px; line-height: 1.7;
+  color: var(--code-text);
+}
+.content hr {
+  border: none; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-h), transparent);
+  margin: 48px 0;
+}
+.content .note {
+  font-size: 15px; color: var(--text-3); font-style: italic;
+  margin: 16px 0;
+}
+
+/* Blend white image backgrounds into the page color */
+.article-wrap img { mix-blend-mode: multiply; }
+
+@media (max-width: 600px) {
+  nav { padding: 0 16px; }
+  .article-wrap { padding: 40px 20px 80px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">&larr; Back to home</a>
+</nav>
+
+
+<div class="article-wrap">
+  <div class="article-meta">October 26, 2026 &middot; ⏳ 4 min &middot; <a href="https://x.com/0xtoninorair/status/2114703575372677200" target="_blank" style="text-decoration:underline;text-underline-offset:3px">X &nearr;</a></div>
+  <h1 class="article-title">How Tokenized Funds Get Instantly Liquid</h1>
+
+  <img src="images/tokenized-funds/cover.jpg" alt="Instant Liquidity" style="width:100%; height:auto; display:block; border-radius:8px; margin-bottom:2rem;">
+
+  <div class="content">
+
+    <p>📖 Reading time: 4 min<br>👀 Viewing time: 4 min</p>
+
+    <p>Tokenizing an asset is only as credible as the market structure behind it. Minting a fund share onchain has become a formality. Putting any type of token on any chain can be a few minutes of engineering work, one prompt and a simple dev wallet funding away. Making it usable, fungible and compliant is where the challenge stands.</p>
+
+    <p>The instant exit of otherwise slow-liquidity tokenized funds is the problem a few startups are trying to tackle. In the last few weeks we&rsquo;ve seen new fundraise announcements, including Fission&rsquo;s $10M Series A led by Pantera Capital and Multiliquid&rsquo;s $8M seed round led by Polychain.</p>
+
+    <p>The major players in the space are currently Fission, Upshift Clear, Grove Basin, Multiliquid, and Symbiotic Liquid Lane.</p>
+
+    <figure style="margin:32px 0">
+      <img src="images/tokenized-funds/image1.jpg" alt="Instant Redemption Projects timeline, June 2025 to October 2026" style="width:100%; height:auto; display:block; border-radius:8px;">
+      <figcaption style="margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--text-3);">Project launch timelines, June 2025 &ndash; Oct 2026</figcaption>
+    </figure>
+
+    <p>For most tokenized funds, the old redemption cycle still applies even after the token moves onchain. The goal is broader distribution, continuous liquidity, and tokenized fund holdings that investors can borrow against. Getting there means giving eligible holders access to capital without waiting for redemption windows, while keeping the investor eligibility rules, transfer restrictions and compliance controls that regulated funds require.</p>
+
+    <p>The core features are:</p>
+    <ul>
+      <li><strong>Instant exits:</strong> Holders receive stablecoins, usually USDC, for a fee, without waiting for the issuer&rsquo;s redemption window.</li>
+      <li><strong>Pooled liquidity:</strong> Vaults and liquidity providers fund those exits up front.</li>
+      <li><strong>Idle capital at work:</strong> Curators lend out vault capital, for example on Morpho, to earn yield until an exit needs it.</li>
+      <li><strong>Settlement in the background:</strong> The issuer settles the redemption later, on its own timeline, after the holder has been paid.</li>
+      <li><strong>EVM first, SVM next:</strong> Most activity is on EVM, mostly Ethereum mainnet, with SVM (Solana) following.</li>
+    </ul>
+
+    <hr>
+
+    <h2>How Each Project Works</h2>
+
+    <p>The best way to understand how redemption facilities work onchain is to see the transactions 👀. Below is a 5&ndash;7 minute video walkthrough of real EVM and SVM flows across all five projects, showing each one&rsquo;s redemption process from start to finish. Each clip is a short look at one project.</p>
+
+    <h3>Fission</h3>
+    <p>Fission buys fund shares as principal from its own balance sheet. It escrows USDC for a named seller, who fills by delivering the tokens, and then Fission redeems them with the issuer. It has the largest real volume of the five projects.</p>
+    <p>Fill: 327K mGLOBAL &rarr; $333K, 0.30% fee. <a href="https://etherscan.io/tx/0x9723cd34da805b0d56def5816d5221165bbc371374ede0ce0361ff97f0273179" target="_blank" style="text-decoration:underline;text-underline-offset:3px">Etherscan &nearr;</a></p>
+    <figure style="margin:32px 0">
+      <video controls playsinline preload="metadata" src="images/tokenized-funds/video1.mp4" style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"></video>
+      <figcaption style="margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--text-3);">Fission redemption walkthrough</figcaption>
+    </figure>
+
+    <h3>Multiliquid</h3>
+    <p>A swap contract prices each fund at NAV minus a discount set by each liquidity provider. Funds move straight from the provider&rsquo;s wallet to the seller. It lists nine or more funds on Ethereum and Solana, though use so far is test-sized.</p>
+    <p>EVM: 2 WTGXX &rarr; $2. <a href="https://etherscan.io/tx/0xc0c35ac9053c3b21a53f842ec4dcd5560d9965192f201fe1e7783e3f9dc2e68d" target="_blank" style="text-decoration:underline;text-underline-offset:3px">Etherscan &nearr;</a><br>SVM: 5 WTGXX &rarr; $4.99. <a href="https://solscan.io/tx/4ryk7yUSuZL1yjofGKRcjx1Xh2MZ9fbHZ6mqwVCNdVR4riRJxRAtVPrLszwzYQeRCs3ABYsRKMzWfh3RyVznS27s" target="_blank" style="text-decoration:underline;text-underline-offset:3px">Solscan &nearr;</a></p>
+    <figure style="margin:32px 0">
+      <video controls playsinline preload="metadata" src="images/tokenized-funds/video2.mp4" style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"></video>
+      <figcaption style="margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--text-3);">Multiliquid redemption walkthrough</figcaption>
+    </figure>
+
+    <h3>Upshift Clear</h3>
+    <p>LPs deposit USDC into a vault, which earns yield on Morpho while idle. A holder sells fund shares into the vault at the Chainlink NAV minus 5 bps, and Upshift redeems them with the issuer. USCC is the only asset so far.</p>
+    <p>Last: 1,000 USCC &rarr; $11.6K. <a href="https://etherscan.io/tx/0x4445e5d9732b380d0992b4666bbac98cbcc2da119b6cff533bcf1c6bc77e4081" target="_blank" style="text-decoration:underline;text-underline-offset:3px">Etherscan &nearr;</a></p>
+    <figure style="margin:32px 0">
+      <video controls playsinline preload="metadata" src="images/tokenized-funds/video3.mp4" style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"></video>
+      <figcaption style="margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--text-3);">Upshift Clear redemption walkthrough</figcaption>
+    </figure>
+
+    <h3>Grove Basin</h3>
+    <p>Sky&rsquo;s capital, held as USDS and converted to USDC through Sky&rsquo;s PSM, buys BUIDL and JTRSY at an oracle rate with no fee. Basin redeems the shares with the fund, usually by the next day, and repays Sky.</p>
+    <p>1st redemption: 100K JTRSY &rarr; $111K. <a href="https://etherscan.io/tx/0xabdbd9d28a47722d2570baedc1736df72b68dbdda59512e9e3e7995d40892b14" target="_blank" style="text-decoration:underline;text-underline-offset:3px">Etherscan &nearr;</a></p>
+    <figure style="margin:32px 0">
+      <video controls playsinline preload="metadata" src="images/tokenized-funds/video4.mp4" style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"></video>
+      <figcaption style="margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--text-3);">Grove Basin redemption walkthrough</figcaption>
+    </figure>
+
+    <h3>Symbiotic Liquid Lane</h3>
+    <p>Market makers quote a discount, and the winning quote is paid in USDC from a curated Symbiotic vault. A contract holds the fund tokens, requests redemption from the issuer, and repays the vault. It covers JTRSY, JAAA, HYB and Midas tokens.</p>
+    <p>1st redemption: 89.7K JTRSY &rarr; $100K. <a href="https://etherscan.io/tx/0x576728e560826f4181de69bdf91a81326444a91579d180c4b3f467536c9b0d2f" target="_blank" style="text-decoration:underline;text-underline-offset:3px">Etherscan &nearr;</a></p>
+    <figure style="margin:32px 0">
+      <video controls playsinline preload="metadata" src="images/tokenized-funds/video5.mp4" style="width:100%; height:auto; display:block; border-radius:8px; background:#000;"></video>
+      <figcaption style="margin-top:10px; font-family:var(--mono); font-size:12px; color:var(--text-3);">Symbiotic Liquid Lane redemption walkthrough</figcaption>
+    </figure>
+
+    <hr>
+
+    <p>Onchain flows remain modest for now; the five examples above total roughly $556K. But every new fund that is tokenized, and every financial product that moves onchain, adds to the demand for instant liquidity, and the trajectory points only upward 📈.</p>
+  </div>
+</div>
+<footer style="border-top:1px solid rgba(0,0,0,0.08); padding:28px 40px; display:flex; align-items:center; justify-content:flex-end;">
+  <div style="display:flex; gap:24px;">
+    <a href="#" style="font-family:var(--mono); font-size:11px; color:var(--text-3);">GitHub</a>
+    <a href="#" style="font-family:var(--mono); font-size:11px; color:var(--text-3);">Twitter</a>
+    <a href="#" style="font-family:var(--mono); font-size:11px; color:var(--text-3);">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
