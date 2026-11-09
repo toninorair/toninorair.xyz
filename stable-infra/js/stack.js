@@ -83,11 +83,7 @@ export function renderStack(root, { categories, companies }) {
     return block;
   });
 
-  const caption = doc.createElement("p");
-  caption.className = "stack-caption";
-  caption.textContent = "Hover to pause · height = companies per layer";
-
-  root.append(plane, caption);
+  root.append(plane);
 
   /** Lift the blocks for `ids` (any iterable of category ids); fade the rest. */
   function setActive(ids) {

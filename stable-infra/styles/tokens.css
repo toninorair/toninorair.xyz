@@ -100,8 +100,7 @@
   --font-size-3xl: 2.125rem;
 
   /* Display scale — fluid, serif only. */
-  --font-size-hero: clamp(3.25rem, 7vw, 6.5rem);
-  --font-size-section: clamp(2.75rem, 5vw, 4.5rem);
+  --font-size-wordmark: clamp(1.75rem, 1rem + 2.5vw, 3rem);
   --font-size-stat: clamp(3rem, 5vw, 4rem);
   --font-size-display: clamp(3rem, 7vw, 5rem);
 
@@ -164,6 +163,12 @@
      ---------------------------------------------------------------- */
   --panel-width: 44rem;
   --panel-label-width: 10rem;
+
+  /* ---------------------------------------------------------------
+     Directory bands
+     ---------------------------------------------------------------- */
+  --band-aside-width: 16rem;       /* heading column beside the list */
+  --company-column-width: 14rem;   /* target width of a name column */
   --color-panel-scrim: rgb(20 20 20 / 0.35);
 
   /* ---------------------------------------------------------------
@@ -193,6 +198,7 @@
   --motion-spin: 90s;
   --motion-marquee: 140s;
   --motion-count-up: 1600;
+  --motion-share: 1200ms;
 
   --cursor-dot-size: 0.5rem;
 }
@@ -211,5 +217,6 @@
     --motion-stagger: 0ms;
     --motion-intro: 0ms;
     --motion-count-up: 0;
+    --motion-share: 0ms;
   }
 }

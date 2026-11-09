@@ -31,7 +31,7 @@ export function renderMap(root, { categories, companies }) {
 
   for (const [index, category] of categories.entries()) {
     grid.append(
-      categorySection(doc, category, index, byCategory.get(category.id) ?? []),
+      categorySection(doc, category, index, byCategory.get(category.id) ?? [], companies.length),
     );
   }
 
@@ -45,7 +45,12 @@ export function renderMap(root, { categories, companies }) {
   };
 }
 
-function categorySection(doc, category, index, companies) {
+// ---------------------------------------------------------------
+// Band layout: each category is a full-width band — an aside (kicker,
+// heading, share bar) beside a body (every company, in columns).
+// ---------------------------------------------------------------
+
+function categorySection(doc, category, index, companies, rosterTotal) {
   const section = doc.createElement("li");
   section.className = "cluster";
   section.dataset.categoryId = category.id;
@@ -85,8 +90,43 @@ function categorySection(doc, category, index, companies) {
   count.textContent = String(category.count);
 
   header.append(name, count);
-  section.append(kicker, header, companyList(doc, companies));
+
+  const aside = doc.createElement("div");
+  aside.className = "cluster-aside";
+  aside.append(kicker, header, shareBar(doc, companies.length, rosterTotal));
+
+  const body = doc.createElement("div");
+  body.className = "cluster-body";
+  body.append(companyList(doc, companies));
+
+  section.append(aside, body);
   return section;
+}
+
+/**
+ * The share bar: this category's slice of the listed roster, as a thin
+ * rule that grows in on reveal, and a mono "n of N listed" label.
+ * Roster counts (not slide counts) — the bar measures what is listed.
+ */
+function shareBar(doc, count, total) {
+  const share = doc.createElement("div");
+  share.className = "category-share";
+  share.dataset.reveal = "";
+  share.style.setProperty("--share", total > 0 ? String(count / total) : "0");
+
+  const track = doc.createElement("span");
+  track.className = "category-share-track";
+  track.setAttribute("aria-hidden", "true");
+  const fill = doc.createElement("span");
+  fill.className = "category-share-fill";
+  track.append(fill);
+
+  const label = doc.createElement("span");
+  label.className = "category-share-label";
+  label.textContent = `${count} of ${total} listed`;
+
+  share.append(track, label);
+  return share;
 }
 
 function groupByCategory(companies) {

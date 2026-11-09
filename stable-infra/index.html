@@ -34,11 +34,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow intro-fade">(01) — Market map · 2026</p>
-          <h1 class="hero-title" id="hero-title">
-            <span class="intro-line"><span>The stablecoin stack,</span></span>
-            <span class="intro-line"><span><em>mapped</em> layer</span></span>
-            <span class="intro-line"><span>by layer.</span></span>
-          </h1>
+          <h1 class="visually-hidden" id="hero-title">Stablecoin Infrastructure</h1>
           <div class="hero-stats intro-fade">
             <p class="stat">
               <span class="stat-value" data-stat-companies></span>
@@ -48,10 +44,6 @@
               <span class="stat-value" data-stat-layers></span>
               <span class="stat-label">Layers</span>
             </p>
-            <p class="hero-note">
-              From the issuers who mint, to the networks and exchanges where it
-              settles. Each block’s height is how many companies that layer lists.
-            </p>
           </div>
           <div class="legend intro-fade" data-legend role="group" aria-label="Filter by layer"></div>
         </div>
@@ -60,24 +52,21 @@
 
       <div class="marquee" data-marquee aria-hidden="true"></div>
 
-      <section class="directory-section" aria-labelledby="directory-title">
-        <div class="section-head">
-          <h2 class="section-title" id="directory-title" data-reveal>
-            <span class="section-num">(02)</span> The directory.
-          </h2>
-          <p class="results-count" data-results-count role="status"></p>
-        </div>
+      <section class="directory-section" aria-label="Companies by category">
         <section class="toolbar" aria-label="Search and category filters">
-          <div class="search">
-            <label class="search-label" for="search-input">Search</label>
-            <input
-              type="search"
-              id="search-input"
-              class="search-input"
-              placeholder="Company or product…"
-              autocomplete="off"
-              spellcheck="false"
-            />
+          <div class="section-head">
+            <div class="search">
+              <label class="visually-hidden" for="search-input">Search</label>
+              <input
+                type="search"
+                id="search-input"
+                class="search-input"
+                placeholder="Search"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+            <p class="results-count" data-results-count role="status"></p>
           </div>
           <nav class="chips" data-filter-chips aria-label="Filter by category"></nav>
         </section>
@@ -99,6 +88,15 @@
       <p class="footer-brand">Stablecoin Infrastructure</p>
       <p class="footer-meta" data-footer-meta></p>
       <a class="key" href="#top">Top <span aria-hidden="true">↑</span></a>
+      <p class="footer-source">
+        Company list and categories taken from
+        <a
+          href="https://x.com/gaspardlezin/status/2113285239141253504/photo/1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >this post by @gaspardlezin</a
+        >.
+      </p>
     </footer>
 
     <div id="panel-layer" class="panel-layer" hidden>
