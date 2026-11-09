@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stablecoin Infrastructure</title>
+    <meta
+      name="description"
+      content="The stablecoin stack, mapped layer by layer: issuers, infrastructure, payments, banks, chains, wallets, remittances, cards, networks and exchanges."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#directory">Skip to the directory</a>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top">Stablecoin Infrastructure</a>
+      <nav class="index-nav" data-index-nav aria-label="Jump to a category"></nav>
+      <div class="header-keys">
+        <button type="button" class="key" data-find aria-keyshortcuts="F">
+          Find <kbd>F</kbd>
+        </button>
+        <a class="key" href="#directory">Index <span aria-hidden="true">↓</span></a>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow intro-fade">(01) — Market map · 2026</p>
+          <h1 class="visually-hidden" id="hero-title">Stablecoin Infrastructure</h1>
+          <div class="hero-stats intro-fade">
+            <p class="stat">
+              <span class="stat-value" data-stat-companies></span>
+              <span class="stat-label">Companies</span>
+            </p>
+            <p class="stat">
+              <span class="stat-value" data-stat-layers></span>
+              <span class="stat-label">Layers</span>
+            </p>
+          </div>
+          <div class="legend intro-fade" data-legend role="group" aria-label="Filter by layer"></div>
+        </div>
+        <div class="stack-stage" data-stack aria-hidden="true"></div>
+      </section>
+
+      <div class="marquee" data-marquee aria-hidden="true"></div>
+
+      <section class="directory-section" aria-label="Companies by category">
+        <section class="toolbar" aria-label="Search and category filters">
+          <div class="section-head">
+            <div class="search">
+              <label class="visually-hidden" for="search-input">Search</label>
+              <input
+                type="search"
+                id="search-input"
+                class="search-input"
+                placeholder="Search"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+            <p class="results-count" data-results-count role="status"></p>
+          </div>
+          <nav class="chips" data-filter-chips aria-label="Filter by category"></nav>
+        </section>
+        <section class="empty-state" data-empty-state hidden>
+          <h2 class="empty-title">No matches</h2>
+          <p class="empty-hint">
+            No companies match the current search and filters. Clear them to see
+            the full roster again.
+          </p>
+          <button type="button" class="empty-reset" data-filters-reset>
+            Reset search and filters
+          </button>
+        </section>
+        <section id="directory" class="directory" aria-label="Stablecoin ecosystem directory"></section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">Stablecoin Infrastructure</p>
+      <p class="footer-meta" data-footer-meta></p>
+      <a class="key" href="#top">Top <span aria-hidden="true">↑</span></a>
+      <p class="footer-source">
+        Company list and categories taken from
+        <a
+          href="https://x.com/gaspardlezin/status/2113285239141253504/photo/1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >this post by @gaspardlezin</a
+        >.
+      </p>
+    </footer>
+
+    <div id="panel-layer" class="panel-layer" hidden>
+      <div class="panel-scrim" data-panel-close aria-hidden="true"></div>
+      <aside class="profile-panel" role="dialog" aria-modal="false" aria-labelledby="panel-company-name">
+        <header class="panel-head">
+          <div class="panel-bar">
+            <p class="panel-category" data-panel-category></p>
+            <div class="panel-actions">
+              <button type="button" class="panel-step" data-panel-prev aria-label="Previous company" aria-keyshortcuts="ArrowLeft">
+                <span aria-hidden="true">←</span>
+              </button>
+              <span class="panel-position" data-panel-position></span>
+              <button type="button" class="panel-step" data-panel-next aria-label="Next company" aria-keyshortcuts="ArrowRight">
+                <span aria-hidden="true">→</span>
+              </button>
+              <button type="button" class="panel-close" data-panel-close aria-label="Close profile panel" aria-keyshortcuts="Escape">
+                <span aria-hidden="true">Esc</span>
+              </button>
+            </div>
+          </div>
+          <div class="panel-id">
+            <span class="panel-mark" data-panel-logo></span>
+            <h2 class="panel-name" id="panel-company-name" data-panel-name tabindex="-1"></h2>
+          </div>
+        </header>
+        <div class="panel-scroll">
+          <div class="panel-body" data-panel-body></div>
+          <nav class="panel-more" data-panel-more aria-labelledby="panel-more-title" hidden>
+            <h3 class="panel-more-title" id="panel-more-title" data-panel-more-title></h3>
+            <ul class="panel-more-list" data-panel-more-list role="list"></ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
